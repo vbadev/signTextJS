@@ -18,6 +18,8 @@ for (var nickname in data.certs) {
   var option = document.createElement("option");
   option.setAttribute("value", nickname);
   option.textContent = nickname;
+  if(data.certs[nickname].selected)
+    option.selected = "selected";
   certNicknames.appendChild(option);
 }
 
