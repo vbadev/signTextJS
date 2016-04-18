@@ -1,6 +1,6 @@
 {
-  "name": "signtextjs",
-  "title": "signTextJS",
+  "name": "signtextjsplus",
+  "title": "signTextJS plus",
   "id": "jid1-FkPKYIvh3ElkQO@jetpack",
   "description": "window.crypto.signText replacement",
   "author": "dkeeler@mozilla.com, rbarnes@mozilla.com, vbadev@gmail.com",

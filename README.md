@@ -18,7 +18,8 @@ Then, after checking out this repo, use `jpm run` to run Firefox with the
 add-on installed or `jpm xpi` to package the addon. After the add-on has been
 installed, content scripts that call `window.crypto.signText` should "just
 work".
-Alternatively, download and install the prepackaged xpi [here](signtextjs.xpi).
+Alternatively, download and install a prepackaged xpi
+[here](https://addons.mozilla.org/en-US/firefox/addon/signtextjs-plus/).
 
 TODO
 ----
