@@ -28,12 +28,15 @@ function displayCertDetails() {
   data.selectedCert = selection.value;
   var certDetails = data.certs[selection.value];
   var detailsElement = document.getElementById("certDetails");
+  var certUsages = "";
+  if(certDetails.usagesString != null)
+    certUsages = "  " + data.l10n["key_usage"] + " " + certDetails.usagesString + "\n";
   detailsElement.textContent = data.l10n["subject"] + " " + certDetails.subject + "\n" +
                                "  " + data.l10n["serial"] + " " + certDetails.serialNumber + "\n" +
                                "  " + data.l10n["valid_from"] + " " +
                                       certDetails.notBefore + " " + data.l10n["to"] + " " +
                                       certDetails.notAfter + "\n" +
-                               "  " + data.l10n["key_usage"] + " " + certDetails.usagesString + "\n" +
+                               certUsages +
                                "  " + data.l10n["email"] + " " + certDetails.email + "\n" +
                                data.l10n["issuer"] + " " + certDetails.issuer + "\n" +
                                data.l10n["token"] + " " + certDetails.token;
