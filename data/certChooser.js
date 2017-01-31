@@ -15,7 +15,10 @@ var certNicknames = document.getElementById("certNicknames");
 for (var key in data.certs) {
   var option = document.createElement("option");
   option.setAttribute("value", key);
-  option.textContent = data.certs[key].nickname;
+  if(data.certs[key].nickname)
+    option.textContent = data.certs[key].nickname;
+  else
+    option.textContent = data.certs[key].token + ":" + data.certs[key].serialNumber;
   certNicknames.appendChild(option);
 }
 
